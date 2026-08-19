@@ -10,3 +10,7 @@ class TestClass:
         a = 3
         b = 5
         assert a+b == 8
+    def test_three(self):
+        a = 4
+        b = 6
+        assert a+b == 10
