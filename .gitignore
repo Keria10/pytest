@@ -1,0 +1,257 @@
+# ============================
+# Python 相关
+# ============================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+test-results/
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# pdm
+.pdm.toml
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+pythonenv*
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# ============================
+# 测试报告（重要！不要提交到仓库）
+# ============================
+
+# pytest-html 生成的报告
+*.html
+report.html
+test-report.html
+
+# Allure 报告
+allure-results/
+allure-report/
+
+# 其他测试报告
+test-output/
+target/
+reports/
+
+# ============================
+# 日志文件
+# ============================
+
+*.log
+logs/
+*.log.*
+
+# ============================
+# 配置文件（含敏感信息）
+# ============================
+
+# 环境变量文件
+.env
+.env.local
+.env.*.local
+secrets.env
+
+# 配置文件（如果包含密码/密钥）
+config.local.yaml
+config.local.yml
+secrets.yaml
+secrets.yml
+credentials.json
+
+# ============================
+# IDE / 编辑器相关
+# ============================
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+.*.swp
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# ============================
+# 操作系统相关
+# ============================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Windows
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+
+# ============================
+# 临时文件
+# ============================
+
+*.tmp
+*.temp
+*.bak
+*.backup
+*.cache
+*.swp
+*.swo
+
+# ============================
+# 浏览器驱动（重要！不要提交二进制文件）
+# ============================
+
+chromedriver.exe
+chromedriver
+geckodriver.exe
+geckodriver
+msedgedriver.exe
+msedgedriver
+webdriver/
+drivers/
+
+# ============================
+# 其他
+# ============================
+
+# 下载的临时文件
+downloads/
+temp/
+
+# 数据文件（视情况而定）
+*.db
+*.sqlite
+*.sqlite3
+
+# 压缩文件
+*.zip
+*.tar.gz
+*.rar
+*.7z
