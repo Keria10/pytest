@@ -8,7 +8,7 @@ class TestClass:
 
     def test_two(self):
         a = 3
-        b = 5
+        b = 4
         assert a+b == 8
     def test_three(self):
         a = 4
