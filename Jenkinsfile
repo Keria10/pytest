@@ -28,7 +28,7 @@ pipeline {
         stage('Run Tests') {
             steps {
                 sh '''
-                    source ${VENV_DIR}/bin/activate
+                    . ${VENV_DIR}/bin/activate
                     mkdir -p ${REPORT_DIR}
                     pytest --junitxml=${REPORT_DIR}/results.xml --html=${REPORT_DIR}/report.html --self-contained-html
                 '''
