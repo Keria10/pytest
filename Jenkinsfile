@@ -51,20 +51,20 @@ pipeline {
 //                     pytest --junitxml=${REPORT_DIR}/results.xml --html=${REPORT_DIR}/report.html --self-contained-html
 //                 '''
 //             }
-            post {
-                always {
-                    junit "${REPORT_DIR}/results.xml"
-                    publishHTML([
-                        reportDir: "${REPORT_DIR}",
-                        reportFiles: 'report.html',
-                        reportName: 'Pytest HTML Report',
-                        allowMissing: false,
-                        alwaysLinkToLastBuild: true,
-                        keepAll: true
-                    ])
-                }
-            }
-        }
+//             post {
+//                 always {
+//                     junit "${REPORT_DIR}/results.xml"
+//                     publishHTML([
+//                         reportDir: "${REPORT_DIR}",
+//                         reportFiles: 'report.html',
+//                         reportName: 'Pytest HTML Report',
+//                         allowMissing: false,
+//                         alwaysLinkToLastBuild: true,
+//                         keepAll: true
+//                     ])
+//                 }
+//             }
+//         }
 //     }
 
     post {
