@@ -25,47 +25,47 @@ pipeline {
             }
         }
 
-        stage('Run Unit Tests') {
-            steps {
-                sh '''
-                    . ${VENV_DIR}/bin/activate
-                    pytest test_case.py --junitxml=${REPORT_DIR}/unit-results.xml
-                '''
-            }
-        }
-
-        stage('Run API Tests') {
-            steps {
-                sh '''
-                    . ${VENV_DIR}/bin/activate
-                    pytest test_API.py --junitxml=${REPORT_DIR}/api-results.xml
-                '''
-            }
-        }
-
-//         stage('Run Tests') {
+//         stage('Run Unit Tests') {
 //             steps {
 //                 sh '''
 //                     . ${VENV_DIR}/bin/activate
-//                     mkdir -p ${REPORT_DIR}
-//                     pytest --junitxml=${REPORT_DIR}/results.xml --html=${REPORT_DIR}/report.html --self-contained-html
+//                     pytest test_case.py --junitxml=${REPORT_DIR}/unit-results.xml
 //                 '''
 //             }
-//             post {
-//                 always {
-//                     junit "${REPORT_DIR}/results.xml"
-//                     publishHTML([
-//                         reportDir: "${REPORT_DIR}",
-//                         reportFiles: 'report.html',
-//                         reportName: 'Pytest HTML Report',
-//                         allowMissing: false,
-//                         alwaysLinkToLastBuild: true,
-//                         keepAll: true
-//                     ])
-//                 }
+//         }
+//
+//         stage('Run API Tests') {
+//             steps {
+//                 sh '''
+//                     . ${VENV_DIR}/bin/activate
+//                     pytest test_API.py --junitxml=${REPORT_DIR}/api-results.xml
+//                 '''
 //             }
 //         }
-//     }
+
+        stage('Run Tests') {
+            steps {
+                sh '''
+                    . ${VENV_DIR}/bin/activate
+                    mkdir -p ${REPORT_DIR}
+                    pytest --junitxml=${REPORT_DIR}/results.xml --html=${REPORT_DIR}/report.html --self-contained-html
+                '''
+            }
+            post {
+                always {
+                    junit "${REPORT_DIR}/results.xml"
+                    publishHTML([
+                        reportDir: "${REPORT_DIR}",
+                        reportFiles: 'report.html',
+                        reportName: 'Pytest HTML Report',
+                        allowMissing: false,
+                        alwaysLinkToLastBuild: true,
+                        keepAll: true
+                    ])
+                }
+            }
+        }
+    }
 
     post {
         always {
